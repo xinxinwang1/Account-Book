@@ -17,7 +17,7 @@ Public with sharing Class UpdateAccountingEntry {
     Public UpdateAccountingEntry ( List<Accounting_Entry__c> UpdateAccountingEntryList ) {
         for ( Accounting_Entry__c a : UpdateAccountingEntryList ) {
             if ( a.Occurred_Date__c < System.Now().addMonths(-1) ){
-                a.Locked__c = true;
+                a.Locked__c = faulse;
             }  
         }
        
